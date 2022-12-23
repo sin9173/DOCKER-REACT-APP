@@ -1,0 +1,19 @@
+#base image
+FROM node:alpine
+
+#DIR
+WORKDIR /usr/src/app
+
+#COPY 
+COPY package.json ./
+
+#RUN
+RUN npm install
+
+#COPY
+#COPY ./ ./
+
+#CMD
+CMD ["npm", "run", "start"]
+
+ENV CHOKIDAR_USEPOLLING=true

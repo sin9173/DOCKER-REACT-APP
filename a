@@ -1,0 +1,2 @@
+#도커 빌드 파일 지정
+docker build -f Dockerfile.dev ./
