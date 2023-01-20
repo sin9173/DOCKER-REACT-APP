@@ -44,9 +44,9 @@ deploy:
   on:
     #AWS에 배포할 브랜치
     branch: master
-#인증정보 (Travis-ci에서 설정한 환경변수 가져오기)
-access_key_id: $AWS_ACCESS_KEY
-secret_access_key: $AWS_SECRET_ACCESS_KEY    
+  #인증정보 (Travis-ci에서 설정한 환경변수 가져오기)
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_ACCESS_KEY    
 
 
 #테스트 성공 후 동작
