@@ -13,9 +13,10 @@ services:
 #스크립트를 실행할 수 있는 환경 구성
 before_install:
   - echo "start creating an image with dockerfile"
-  - docker build -t sin9173/docker-react-app -f Dockerfile.dev
+  - docker build -t sin9173/docker-react-app -f Dockerfile.dev .
 
 #실행할 스크립트 (테스트) Travis-CI 사용할 경우 CI=true 옵션
+#coverage : 상세로그 출력
 script:
   - docker run -e CI=true sin9173/docker-react-app npm run test -- --coverage
 
